@@ -9,7 +9,9 @@ list of error messages in a file called errors.txt.
 2. Question#2: run vi forever in the terminal and write the following script: 
 
 while true 
+
 do echo hi Comp311 students> out 
+
 done: wq! 
 
 3. Question#3: Run the command forever in the background using &. 
