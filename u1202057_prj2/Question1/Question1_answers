@@ -1,0 +1,110 @@
+Q1:
+
+find / -type d > directories.txt
+find / -type d 2> errors.txt
+
+---------------------------------------------------------------------------------------
+Q2:
+
+vi forever
+
+i
+
+while true
+do
+ echo hi students > out
+done
+
+:wq
+
+---------------------------------------------------------------------------------------
+Q3:
+
+PATH=$PATH:.
+chmod +x forever
+forever&
+
+---------------------------------------------------------------------------------------
+Q4:
+
+fg 
+ctrl+z
+bg
+jobs
+ps
+fg
+ctrl+z
+
+---------------------------------------------------------------------------------------
+Q5:
+
+forever&
+forever&
+forever&
+forever&
+
+kill %2
+kill %3
+kill %4
+kill %5
+
+kill using PID:
+
+forever&
+forever&
+forever&
+forever&
+
+kill 29505
+kill 29513
+kill 29521
+kill 29533
+
+---------------------------------------------------------------------------------------
+Q6: 
+
+forever&
+kill -SIGSTOP %2
+bg %2
+
+---------------------------------------------------------------------------------------
+Q7: 
+
+pkill -9 -f forever
+
+pkill: kill processes based on their name
+
+-9: equivalent to -KILL or -SIGKILL
+
+-f forever: to ensure that all processes with the name or command containing "forever" are terminated.  
+
+---------------------------------------------------------------------------------------
+Q8:
+
+myprj2var="project"
+export myprj2var
+ksh
+echo $myprj2var 
+
+---------------------------------------------------------------------------------------
+Q9:
+
+echo $PATH
+mkdir ~/Prj2
+export PATH=$PATH:~/Prj2
+echo $PATH
+
+---------------------------------------------------------------------------------------
+Q10:
+
+The nice command is used to launch a new process with a specified priority.
+It allows you to set the priority level of a command before executing it. 
+
+Usage example: nice -n 10 ./myprogram 
+
+-- 
+
+The renice command is used to change the priority of an existing running process.
+It allows you to adjust the priority of a process that is already running. 
+
+Usage example: renice +5 1234 
